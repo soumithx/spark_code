@@ -1,0 +1,17 @@
+Spark Parquet
+
+######################################### Writing Parquet ################################################
+
+ import org.apache.spark.sql.SparkSession
+  val spark = SparkSession.builder().master("local").getOrCreate
+ val dd = spark.read.json("world_bank.json
+  val dd = spark.read.json("world_bank.json")
+  val dd = spark.read.json("world_bank.json").toDF
+  dd.show()
+  dd.write.parquet("world.parquet")  
+val dx = spark.read.parquet("world.parquet")     --> Reading Parquet
+  dx.createTempView("soumith")
+  val xx = spark.sql("select url from soumith")
+  xx.show()
+
+
