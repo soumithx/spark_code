@@ -15,4 +15,5 @@ df.show()
 df.createOrReplaceTempView("twitter")
 val dd = spark.sql("Select tweet from twitter")
 dd.show()
-
+val dd = sp.sql("select doctor from episodes")
+dd.write.avro("doctors.avro")
