@@ -1,1 +1,9 @@
-command: scala xx.scala
+version: 2
+jobs:
+           build:
+                        docker:
+                                       - image: circleci/<scala>:<version TAG>
+                                              steps:
+                                                             - checkout
+                                                                      - run: scala xx.scala
+
