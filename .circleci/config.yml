@@ -2,8 +2,8 @@ version: 2
 jobs:
            build:
                         docker:
-                                       - image: circleci/<scala>:<version TAG>
+                                       - image: circleci/<bash>:<2>
                                               steps:
                                                              - checkout
-                                                                      - run: scala xx.scala
+                                                                      - run: echo "hello"
 
